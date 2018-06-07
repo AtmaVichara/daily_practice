@@ -6,7 +6,7 @@ Practice coding challenges and problems daily. Build up problem solving skills, 
 
 ### Possible Work
 
- * Big [Project List](./project-list.md) (Special thanks to @mgmilton)
+ * Big [Project List](./project-list.md) (Special thanks to [Matt](https://github.com/mgmilton))
  * Cracking the Coding Interview
  * The Algorithm Design Manual
 
