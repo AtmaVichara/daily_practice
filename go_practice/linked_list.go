@@ -47,18 +47,15 @@ func (L *List) Append(val interface{}) {
 }
 
 func (L *List) Insert(position int, val interface{}) {
-  node := &Node{
-    val: val,
-  }
-
   l := L.head
   for i := 1; i < position; i++ {
     l = l.next
   }
-  holder := l.next
+  node := &Node{
+    next: l.next,
+    val: val,
+  }
   l.next = node
-  l.next.next = holder
-
   L.count++
 }
 
@@ -126,6 +123,5 @@ func main() {
   fmt.Println(l.Shift())
   l.Show()
 
-  fmt.Printf("list: %v\n", l)
   fmt.Printf("count: %v\n", l.Count())
 }
