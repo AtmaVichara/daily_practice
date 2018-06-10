@@ -4,7 +4,7 @@ import "fmt"
 
 type Node struct {
   next *Node
-  prev *Node
+
   val interface{}
 }
 
@@ -20,9 +20,6 @@ func (L *List) Prepend(val interface{}) {
     val: val,
   }
 
-  if L.head != nil {
-    L.head.prev = node
-  }
   L.head = node
 
   l := L.head
@@ -44,7 +41,6 @@ func (L *List) Append(val interface{}) {
     for l.next != nil {
       l = l.next
     }
-    node.prev = l
     l.next = node
   }
   L.count++
@@ -56,7 +52,7 @@ func (L *List) Insert(position int, val interface{}) {
   }
 
   l := L.head
-  for i := 0; i < position; i++ {
+  for i := 1; i < position; i++ {
     l = l.next
   }
   holder := l.next
@@ -68,7 +64,9 @@ func (L *List) Insert(position int, val interface{}) {
 
 func (L *List) Pop() interface{} {
   if L.head.next == nil {
-    return nil
+    holder := L.head.val
+    L.head = nil
+    return holder
   } else {
     l := L.head
     for l.next.next != nil {
@@ -122,10 +120,10 @@ func main() {
   l.Insert(3, 22)
   l.Show()
 
-  l.Pop()
+  fmt.Println(l.Pop())
   l.Show()
 
-  l.Shift()
+  fmt.Println(l.Shift())
   l.Show()
 
   fmt.Printf("list: %v\n", l)
