@@ -56,7 +56,7 @@ func (L *List) Insert(position int, val interface{}) {
   }
 
   l := L.head
-  for i := 1; i < position; i++ {
+  for i := 0; i < position; i++ {
     l = l.next
   }
   holder := l.next
