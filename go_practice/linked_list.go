@@ -71,9 +71,8 @@ func (L *List) Pop() interface{} {
 }
 
 func (L *List) Shift() interface{} {
-  holder := L.head.next
   value := L.head.val
-  L.head = holder
+  L.head = L.head.next
   L.count--
   return value
 }
