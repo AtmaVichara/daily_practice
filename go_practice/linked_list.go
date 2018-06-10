@@ -19,13 +19,7 @@ func (L *List) Prepend(val interface{}) {
     next: L.head,
     val: val,
   }
-
   L.head = node
-
-  l := L.head
-  for l.next != nil {
-    l = l.next
-  }
   L.count++
 }
 
