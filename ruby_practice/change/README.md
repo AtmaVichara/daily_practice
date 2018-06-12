@@ -4,7 +4,7 @@ Correctly determine the fewest number of coins to be given to a customer such
 that the sum of the coins' value would equal the correct amount of change.
 
 ### Sources
-This exercise was taken from the [exercism.io](http://exercism.io/)
+This exercise was taken from the [exercism.io](http://exercism.io/exercises/ruby/change/readme)
 
 ### Status
 So far only 4 tests passing.
