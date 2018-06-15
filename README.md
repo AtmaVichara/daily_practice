@@ -15,7 +15,5 @@ Practice coding challenges and problems daily. Build up problem solving skills, 
 
 * Ruby & Rails
 * Node & Express
-* C++
+* Java
 * Go
-* Crystal & Amber
-* Elixir & Phoenix
