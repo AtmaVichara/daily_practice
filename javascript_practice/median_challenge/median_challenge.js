@@ -27,7 +27,6 @@ class ArrayMedian {
   findMedian() {
     return this.sum / this.count
   }
-
 }
 
 module.exports = ArrayMedian
