@@ -20,6 +20,7 @@ public class SecondsCalculator {
 		Scanner reader = new Scanner(System.in);
 		System.out.print("Please input days: ");
 		int days = reader.nextInt();
+		reader.close();
 		return days;
 	}
 }
