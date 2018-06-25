@@ -12,10 +12,6 @@ class App extends Component {
             exact path="/"
             component={Welcome}
           />
-          <Route
-            exact path="/about"
-            component={Welcome}
-          />
         </Switch>
       </div>
     );
