@@ -12,7 +12,9 @@ public class CalculateCircumference {
 	public static float userInputRadius() {
 		Scanner reader = new Scanner(System.in);
 		System.out.println("Please input the radius: ");
-		return reader.nextFloat();
+		float radius = reader.nextFloat();
+		reader.close();
+		return radius;
 	}
 
 	public static double calculateCircumference(float radius) {
