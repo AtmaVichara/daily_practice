@@ -25,3 +25,28 @@ func (t *Tree) Find(s string) string {
 
   return t.Root.Find(s)
 }
+
+func (t *Tree) Delete(s string) string {
+  if t.Root == nil {
+    return "Root is Nil"
+  }
+
+  fakeParent := &Node{Right: t.Root}
+  message := t.Root.Delete(s, fakeParent)
+
+  if fakeParent.Right == nil {
+    t.Root = nil
+    return "Deleted Element. Tree is empty."
+  }
+
+  return message
+}
+
+func (t *Tree) Traverse (n *Node, f func(*Node)) {
+  if n == nil {
+    return
+  }
+  t.Traverse(n.Left, f)
+  f(n)
+  t.Traverse(n.Right, f)
+}
